@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <style>
+        body{
+            
+            background-image: linear-gradient(to bottom right,#C36B85,#F2CAC8);
+           margin: 0px;
+           padding: 0px;
+        }input{
+            padding: 10px;
+            width: 350px;
+           
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        div{
+             border: 2px solid lightgrey;
+             display: flex;
+             gap: 20px;
+             flex-direction: column;
+             background-color: white;
+             padding: 60px;
+             
+             border-radius: 20px;
+            
+        }
+        #icon{
+            margin-top: 8.5%;
+            margin-left: 21.5%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <audio id="buttonsound" src="./button.mp3"></audio>
+    <form action="" id="login">
+        <div>
+            <h1 style="margin: 0px; text-align: center;">Login</h1>
+            <input type="email" id="email" placeholder="Enter your email" >
+            <i id="icon" class="fa-solid fa-eye-slash" id="icon"></i>
+            <input type="password" id="password" placeholder="Enter your password">
+            
+            <button onclick="playbuttonsound()" id="button"  type="submit" style=" background-color:rgb(91, 89, 89);color: aliceblue; padding: 10px; font-size: 15px;">
+                submit</button>
+                <p>Don't have an account?<a href="signup.html">Sign Up</a></p>
+        </div>
+    </form>
+    <script src="login.js"></script>
+
+</body>
+</html>
