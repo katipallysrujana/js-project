@@ -17,6 +17,7 @@
             color: black;
             width: 350px;
             padding: 10px;
+            position: relative;
         }
 
         form {
@@ -41,12 +42,162 @@
 
         #icon {
             position: absolute;
-            margin-top: 16%;
-            margin-left: 22%;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
         }
-        #messagebox{
-width: 350px;
-position: relative;
+
+        #messagebox {
+            width: 350px;
+            position: relative;
+        }
+
+        .eyeicon {
+            position: relative;
+            width: 350px;
+
+            input {
+                width: 100%;
+                padding-right: 40px;
+            }
+        }
+
+        @media(max-width:320px) {
+            #div {
+                width: 100vw;
+                padding: 10px;
+            }
+
+            form {
+                width: 100%;
+                padding: 5px;
+            }
+
+            input,
+            button {
+                font-size: 14px;
+                width: 90%;
+            }
+
+            #icon {
+                top: 45%;
+                font-size: 16px;
+                right: 10px;
+            }
+
+            .eyeicon {
+                width: 90%;
+                font-size: 16px;
+            }
+        }
+
+        @media(min-width:321px) and (max-width:425px) {
+            #div {
+                width: 100vw;
+                padding: 20px;
+            }
+
+            form {
+                width: 100%;
+                padding: 10px;
+            }
+
+            input,
+            button {
+                font-size: 16px;
+                width: 85%;
+            }
+
+            .eyeicon {
+                width: 85%;
+                font-size: 16px;
+            }
+
+            #icon {
+                top: 50%;
+                right: 15px;
+                font-size: 18px;
+
+            }
+        }
+
+        @media(min-width:426px) and (max-width:768px) {
+            #div {
+                width: 70vw;
+                padding: 40px;
+            }
+
+            form {
+                width: 100%;
+                padding: 20px;
+            }
+
+            input,
+            button {
+                font-size: 18px;
+                width: 80%;
+            }
+
+            .eyeicon {
+                width: 80%;
+                font-size: 18px;
+            }
+
+            #icon {
+                font-size: 20px;
+                top: 50%;
+                right: 20px
+            }
+        }
+
+        @media(min-width:769px) and (max-width:1024px) {
+            #div {
+                width: 60vw;
+                padding: 40px;
+            }
+
+            form {
+                width: 100%;
+                padding: 20px;
+            }
+
+            input,
+            #button {
+                font-size: 16px;
+                width: 80%;
+            }
+
+            .eyeicon {
+                width: 80%;
+                font-size: 16px;
+            }
+
+            #icon {
+                top: 50%;
+                right: 15px;
+            }
+        }
+
+        @media(min-width:1025px) {
+            #div {
+                width: 30vw;
+                padding: 60px;
+            }
+
+            input,
+            button {
+                font-size: 18px;
+                width: 100%;
+            }
+
+            .eyeicon {
+                width: 100%;
+            }
+
+            #icon {
+                top: 50%;
+                right: 20px;
+            }
         }
     </style>
 </head>
@@ -59,13 +210,15 @@ position: relative;
             <p id="error"></p>
             <input style=" padding: 10px;" type="text" id="name" placeholder="Enter your name " required>
             <input style="padding: 10px" type="email" id="email" placeholder="Enter your email" required>
-            <input style="padding: 10px " type="password" id="password" placeholder="Enter your password" required>
-            <i id="icon" class="fa-solid fa-eye-slash" id="icon"></i>
+            <div class="eyeicon"><input style="padding: 10px " type="password" id="password"
+                    placeholder="Enter your password" required>
+                <i class="fa-solid fa-eye-slash" id="icon"></i>
+            </div>
             <button style=" background-color:rgb(91, 89, 89);color: aliceblue; padding: 10px; font-size: 15px;"
                 onclick="playbuttonsound()" id=button>signin</button>
             <span style="color: black; text-align: center"> Already have an account?<a href="login.html"
                     style="color: black; font-size: 20px;">Login</a></span>
-                    <div id="messagebox"></div>
+            <div id="messagebox"></div>
         </div>
     </form>
 

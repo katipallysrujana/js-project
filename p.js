@@ -1,7 +1,7 @@
 let startTime;
- let updatedTime;
- let difference;
- let tInterval;
+let updatedTime;
+let difference;
+let tInterval;
 let running = false;
 let lapCount = 0;
 
@@ -38,8 +38,8 @@ function updateTime() {
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
     display.innerHTML = (hours < 10 ? "0" + hours : hours) + ":" +
-                        (minutes < 10 ? "0" + minutes : minutes) + ":" +
-                        (seconds < 10 ? "0" + seconds : seconds);
+        (minutes < 10 ? "0" + minutes : minutes) + ":" +
+        (seconds < 10 ? "0" + seconds : seconds);
 }
 
 function recordLap() {
@@ -56,6 +56,6 @@ document.getElementById('stopButton').addEventListener('click', stopTimer);
 document.getElementById('resetButton').addEventListener('click', resetTimer);
 document.getElementById('lapButton').addEventListener('click', recordLap);
 
-function playbuttonsound(){
+function playbuttonsound() {
     document.getElementById("buttonsound").play();
 }
