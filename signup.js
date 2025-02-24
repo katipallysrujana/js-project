@@ -27,7 +27,7 @@ if(name !=="" && email !== "" && password !== ""){
         
     }
     if(!passwordpattern.test(password)){
-        message.textContent="password must be atleast 8 characters long,include atleast 1 uppercase,one lowercase letter,and one"
+        message.textContent="password must be atleast 8 characters long,include atleast 1 uppercase,one lowercase letter,and one number"
         message.style.color="red"
         return;
     }
